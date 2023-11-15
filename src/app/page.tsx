@@ -1,6 +1,6 @@
 import { adminDb } from '@/lib/firebaseAdmin';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export default async function Home() {
   const orders = await adminDb.collection('orders').get();
