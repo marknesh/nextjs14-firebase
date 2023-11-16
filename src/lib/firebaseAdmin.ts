@@ -5,15 +5,10 @@ import { getFirestore } from 'firebase-admin/firestore';
 import { config } from 'dotenv';
 
 config({});
-console.log(process.env.NEXT_PUBLIC_FIREBASE_EMULATOR_PROJECT_ID);
 
 if (process.env.NODE_ENV !== 'production') {
-  process.env.FIREBASE_AUTH_EMULATOR_HOST = 'localhost:9099';
   process.env.FIRESTORE_EMULATOR_HOST = '127.0.0.1:8080';
 }
-
-//The emulatorProjectId is the project id that
-//you use when starting the firebase emulator.
 
 const emulatorProjectId = process.env.NEXT_PUBLIC_FIREBASE_EMULATOR_PROJECT_ID;
 
