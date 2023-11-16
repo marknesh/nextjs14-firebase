@@ -1,6 +1,11 @@
+// import 'server-only';
 import { initializeApp, cert, getApps, getApp, App } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { getFirestore } from 'firebase-admin/firestore';
+import { config } from 'dotenv';
+
+config({});
+console.log(process.env.NEXT_PUBLIC_FIREBASE_EMULATOR_PROJECT_ID);
 
 if (process.env.NODE_ENV !== 'production') {
   process.env.FIREBASE_AUTH_EMULATOR_HOST = 'localhost:9099';

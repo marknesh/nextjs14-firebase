@@ -3,17 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev | firebase emulators:start -P demo-test",
+    "dev": "next dev | firebase emulators:start -P demo-test --import ./saved-data --export-on-exit  ",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "ts-node scripts/seed.ts"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "firebase": "^10.6.0",
     "firebase-admin": "^11.11.0",
     "next": "14.0.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
