@@ -1,4 +1,4 @@
-import { adminDb } from '../lib/firebaseAdmin';
+import { adminDb } from '@/lib/firebaseAdmin';
 
 export const revalidate = 60;
 
