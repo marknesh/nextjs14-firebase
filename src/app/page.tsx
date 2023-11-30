@@ -12,7 +12,7 @@ export default async function Home() {
       {orders.docs.length > 0 ? (
         <ol className='list-disc'>
           {orders.docs.map((doc) => {
-            return <li key={doc.id}>{doc.data().name}ddsdd</li>;
+            return <li key={doc.id}>{doc.data().name}</li>;
           })}
         </ol>
       ) : (
