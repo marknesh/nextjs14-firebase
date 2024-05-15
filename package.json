@@ -2,6 +2,9 @@
   "name": "nextjs14-firebase",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18"
+  },
   "scripts": {
     "dev": "firebase emulators:start -P demo-test --import ./saved-data --export-on-exit | next dev  ",
     "build": "next build",
